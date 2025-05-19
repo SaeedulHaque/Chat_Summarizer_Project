@@ -138,4 +138,7 @@ python summarize.py logs summaries
 -Writes final summary to file
 
 ## Example
-
+### Input Image
+![Image](https://github.com/user-attachments/assets/06c50d0c-3e94-41b1-8d0c-26ee7e31146c)
+### Output Image
+![Image](https://github.com/user-attachments/assets/29e4ab27-8362-4f5e-a280-2d2663d6dd36)
