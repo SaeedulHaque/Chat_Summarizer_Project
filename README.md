@@ -75,22 +75,23 @@ python summarize.py logs summaries
 
 **parse_chat_log(text: str) -> dict**\
 
-Parses each line as Speaker: Message\
+-Parses each line as Speaker: Message\
 
-Returns a dictionary: {speaker_name: [msg1, msg2, ...]}\
+-Returns a dictionary: {speaker_name: [msg1, msg2, ...]}\
 
 **get_message_stats(speaker_msgs: dict) -> dict**\
-Counts total and per-speaker messages\
 
-Example: { 'total_messages': 10, 'User_messages': 6, 'AI_messages': 4 }\
+-Counts total and per-speaker messages\
+
+-Example: { 'total_messages': 10, 'User_messages': 6, 'AI_messages': 4 }\
 
 **extract_keywords(messages: list, use_tfidf=True, top_n=5) -> list**\
 
-Tokenizes all messages\
+-Tokenizes all messages\
 
-Removes stopwords\
+-Removes stopwords\
 
-Extracts top N keywords using:
+-Extracts top N keywords using:
 
 1. TfidfVectorizer (if use_tfidf=True)
 
