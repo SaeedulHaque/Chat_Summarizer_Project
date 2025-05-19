@@ -10,7 +10,7 @@ from utils import (
 def summarize_folder(input_dir, output_dir,
                      use_tfidf=True,
                      use_bart=False,
-                     bart_model="lidiya/bart-large-xsum-samsum",
+                     bart_model="",
                      bart_device=-1):
     p.add_argument
 if __name__ == "__main__":
