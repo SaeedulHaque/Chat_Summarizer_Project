@@ -123,7 +123,7 @@ python summarize.py logs summaries
 
 -Formats the full summary as a printable string
 
-### From summarize.py:
+### From chat_summarizer.py:
 
 **summarize_folder(...)**
 
