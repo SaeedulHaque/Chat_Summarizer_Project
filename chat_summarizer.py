@@ -29,7 +29,25 @@ def summarize_folder(input_dir, output_dir,
         stats = get_message_stats(speaker_msgs)
         all_msgs = [m for msgs in speaker_msgs.values() for m in msgs]
         keywords = extract_keywords(all_msgs, use_tfidf=use_tfidf)
+        #convo_summary
+        if use_bart and bart:
+            convo_summary = bart(
+                "\n".join(all_msgs),
+                max_length=150, min_length=40, do_sample=False
+            )[0]["summary_text"]
+        else:
+            top2 = keywords[:2]
+            if not top2:
+                convo_summary = "No clear topic."
+            elif len(top2) == 1:
+                convo_summary = f"It focused mainly on {top2[0]}."
+            else:
+                convo_summary = f"It focused mainly on {top2[0]} and {top2[1]}."
 
+        summary_text = generate_summary(stats, keywords, convo_summary)
+        out_fn = fn.replace(".txt", "_summary.txt")
+        with open(os.path.join(output_dir, out_fn), 'w', encoding='utf-8') as f:
+            f.write(summary_text)
 if __name__ == "__main__":
 
 
