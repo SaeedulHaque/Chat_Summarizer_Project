@@ -12,7 +12,7 @@ A Python project to analyze and summarize multi-speaker chat logs. It produces a
 - [Usage](#usage)
 - [Functions Explained](#functions-explained)
 - [Example](#example)
-- [Improvement option - BART Summarization](#bart-summarization)
+- [Improvement option - BART Summarization](#further-improvement)
 
 ---
 
@@ -146,4 +146,4 @@ python summarize.py logs summaries
 
 ## Further Improvement
 
-BART (Bidirectional and Auto-Regressive Transformers) is a type of transformer model that uses both bidirectional and autoregressive architectures for natural language processing tasks which could be utilized to give a much more natural response.It is particularly effective for tasks that involve generating text, such as text summarization, translation, and question answering. However it requires GPU usage and importing necessary modules.
+BART (Bidirectional and Auto-Regressive Transformers) is a type of transformer model that uses both bidirectional and autoregressive architectures for natural language processing tasks which could be utilized to give a much more natural response. It is particularly effective for tasks that involve generating text, such as text summarization, translation, and question answering. However it requires GPU usage and importing necessary modules.
