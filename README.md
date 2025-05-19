@@ -42,7 +42,6 @@ It’s useful for:
    - Word frequency (`--no-tfidf`)
 5. Generates a text-based topic summary:
    - Using top keywords (`default`)
-   - Or using BART summarization (`optional`)
 6. Writes everything into a new file.
 
 ---
