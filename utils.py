@@ -4,7 +4,7 @@ import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 nltk.download('stopwords', quiet=True)
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
+#from nltk.tokenize import word_tokenize
 
 STOPWORDS = set(stopwords.words('english'))
 
@@ -41,10 +41,10 @@ def get_message_stats(speaker_msgs):
 
 def extract_keywords(messages, use_tfidf=True, top_n=5):
     joined = " ".join(messages)
-    tokens = word_tokenize(joined.lower())
+#    tokens = word_tokenize(joined.lower())
 
     # Keep only alphanumeric tokens and remove stopwords
-    filtered = [word for word in tokens if word.isalnum() and word not in STOPWORDS]
+#    filtered = [word for word in tokens if word.isalnum() and word not in STOPWORDS]
 
     if use_tfidf:
         vec = TfidfVectorizer(stop_words='english', max_features=top_n)
