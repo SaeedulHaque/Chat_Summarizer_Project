@@ -1,7 +1,6 @@
 # Chat Log Summarizer
 
-A Python project to analyze and summarize multi-speaker chat logs. It produces a concise text summary including total message stats, topic keywords (via TF-IDF or frequency), and an optional abstractive summary using a pretrained BART model.
-
+A Python project to analyze and summarize multi-speaker chat logs. It produces a concise text summary including total message stats and topic keywords (via TF-IDF or frequency)
 ---
 
 ## Contents
