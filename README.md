@@ -143,3 +143,7 @@ python summarize.py logs summaries
 ![Image](https://github.com/user-attachments/assets/06c50d0c-3e94-41b1-8d0c-26ee7e31146c)
 ### Output Image
 ![Image](https://github.com/user-attachments/assets/29e4ab27-8362-4f5e-a280-2d2663d6dd36)
+
+## Further Improvement
+
+BART (Bidirectional and Auto-Regressive Transformers) is a type of transformer model that uses both bidirectional and autoregressive architectures for natural language processing tasks which could be utilized to give a much more natural response.It is particularly effective for tasks that involve generating text, such as text summarization, translation, and question answering. However it requires GPU usage and importing necessary modules.
