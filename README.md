@@ -48,13 +48,14 @@ It’s useful for:
 ---
 
 ## File Structure
+```
 chat-log-summarizer/
 |
 |- summarize.py - Main script
 |- utils.py - Helper functions
 |- logs/ - Folder for input .txt chat logs
 |- summaries/ - Folder for output summary files
-
+```
 ---
 
 ## Installation
