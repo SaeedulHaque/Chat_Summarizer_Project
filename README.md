@@ -12,7 +12,7 @@ A Python project to analyze and summarize multi-speaker chat logs. It produces a
 - [Usage](#usage)
 - [Functions Explained](#functions-explained)
 - [Example](#example)
-- [Improvement option - BART Summarization](#further-improvement)
+- [Further Improvement](#further-improvement)
 
 ---
 
