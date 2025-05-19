@@ -73,58 +73,58 @@ python summarize.py logs summaries
 ## Functions Explained
 ### From utils.py:
 
-**parse_chat_log(text: str) -> dict**
+**parse_chat_log(text: str) -> dict**\
 
-Parses each line as Speaker: Message
+Parses each line as Speaker: Message\
 
-Returns a dictionary: {speaker_name: [msg1, msg2, ...]}
+Returns a dictionary: {speaker_name: [msg1, msg2, ...]}\
 
-**get_message_stats(speaker_msgs: dict) -> dict**
-Counts total and per-speaker messages
+**get_message_stats(speaker_msgs: dict) -> dict**\
+Counts total and per-speaker messages\
 
-Example: { 'total_messages': 10, 'User_messages': 6, 'AI_messages': 4 }
+Example: { 'total_messages': 10, 'User_messages': 6, 'AI_messages': 4 }\
 
-**extract_keywords(messages: list, use_tfidf=True, top_n=5) -> list**
+**extract_keywords(messages: list, use_tfidf=True, top_n=5) -> list**\
 
-Tokenizes all messages
+Tokenizes all messages\
 
-Removes stopwords
+Removes stopwords\
 
 Extracts top N keywords using:
 
 1. TfidfVectorizer (if use_tfidf=True)
 
-**joined = " ".join(messages)**
+**joined = " ".join(messages)**\
 
-Combines all chat messages into one string.
+Combines all chat messages into one string.\
 
-**vec = TfidfVectorizer(stop_words='english', max_features=top_n)**
+**vec = TfidfVectorizer(stop_words='english', max_features=top_n)**\
 
-Initializes the TF-IDF vectorizer.
+Initializes the TF-IDF vectorizer.\
 
-Removes common English stopwords (like the, is, and).
+Removes common English stopwords (like the, is, and).\
 
-Keeps only the top top_n highest-scoring keywords.
+Keeps only the top top_n highest-scoring keywords.\
 
-**vec.fit([joined])**
+**vec.fit([joined])**\
 
-Learns the vocabulary from this single document (the chat log).
+Learns the vocabulary from this single document (the chat log).\
 
-Calculates the TF-IDF score for each word.
+Calculates the TF-IDF score for each word.\
 
-**vec.get_feature_names_out()**
+**vec.get_feature_names_out()**\
 
-Retrieves the top keywords by TF-IDF score
+Retrieves the top keywords by TF-IDF score\
 
-2. Counter frequency (if False)
+2. Counter frequency (if False)\
 
-**generate_summary(stats: dict, keywords: list, convo_summary: str) -> str**
+**generate_summary(stats: dict, keywords: list, convo_summary: str) -> str**\
 
-Formats the full summary as a printable string
+Formats the full summary as a printable string\
 
 ### From summarize.py:
 
-**summarize_folder(...)**
+**summarize_folder(...)**\
 
 Core runner
 
