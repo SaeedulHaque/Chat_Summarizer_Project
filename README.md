@@ -11,7 +11,7 @@ A Python project to analyze and summarize multi-speaker chat logs. It produces a
 - [File Structure](#file-structure)
 - [Usage](#usage)
 - [Functions Explained](#functions-explained)
-- [Example](#example)
+- [Sample Output Example](#example)
 - [Further Improvement](#further-improvement)
 
 ---
