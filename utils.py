@@ -52,3 +52,12 @@ def extract_keywords(messages, use_tfidf=True, top_n=5):
         return [word for word, _ in freq.most_common(top_n)]
     
 def generate_summary(stats, keywords, convo_summary):
+    total = stats['total_messages']
+    kwords_line = ', '.join(keywords) if keywords else 'None'
+    lines = [
+        "Summary:",
+        f"- The number of exchanges in the conversation: {total}",
+        f"- Summary of the conversation: {convo_summary}",
+        f"- Most common keywords: {kwords_line}"
+    ]
+    return "\n".join(lines) + "\n"
