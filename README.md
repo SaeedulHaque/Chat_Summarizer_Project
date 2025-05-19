@@ -134,7 +134,7 @@ python summarize.py logs summaries
 
 -Runs parse_chat_log, get_message_stats, extract_keywords
 
--Generates keyword or BART-based summary
+-Generates keyword and summary
 
 -Writes final summary to file
 
