@@ -48,14 +48,19 @@ def summarize_folder(input_dir, output_dir,
         out_fn = fn.replace(".txt", "_summary.txt")
         with open(os.path.join(output_dir, out_fn), 'w', encoding='utf-8') as f:
             f.write(summary_text)
+        
 if __name__ == "__main__":
-
-
+    p = argparse.ArgumentParser(description="Chat Log Summarizer")
+    p.add_argument("input_dir", help="Folder with .txt logs")
+    p.add_argument("output_dir", help="Folder to write summaries")
+    p.add_argument("--no-tfidf", action="store_true", help="Disable TF-IDF")
+#    p.add_argument("--use-bart", action="store_true", help="Enable BART abstractive summary")
+#    p.add_argument("--bart-model", default="lidiya/bart-large-xsum-samsum",help="Hugging Face model ID for BART")
+#    p.add_argument("--bart-device", type=int, default=-1, help="-1 for CPU or GPU index")
+    args = p.parse_args()
     summarize_folder(
         args.input_dir,
         args.output_dir,
         use_tfidf=not args.no_tfidf,
-        use_bart=args.use_bart,
-        bart_model=args.bart_model,
-        bart_device=args.bart_device
+        use_bart=False
     )
